@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{E5B45B71-E1E6-4AE0-B883-A218E629C5F3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ToolUtil</RootNamespace>
+    <AssemblyName>ToolUtil</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSHostWrap">
+      <HintPath>D:\Program Files (x86)\Electronic Arts\The Sims 3 Map Editor\CSHostWrap.dll</HintPath>
+    </Reference>
+    <Reference Include="DbDataLayer">
+      <HintPath>D:\Program Files (x86)\Electronic Arts\The Sims 3 Map Editor\DbDataLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="DBDataLib">
+      <HintPath>D:\Program Files (x86)\Electronic Arts\The Sims 3 Map Editor\DBDataLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetMagic">
+      <HintPath>D:\Program Files (x86)\Electronic Arts\The Sims 3 Map Editor\DotNetMagic.dll</HintPath>
+    </Reference>
+    <Reference Include="EA.Perforce" />
+    <Reference Include="LDAL">
+      <HintPath>D:\Program Files (x86)\Electronic Arts\The Sims 3 Map Editor\LDAL.dll</HintPath>
+    </Reference>
+    <Reference Include="SharedDotNet">
+      <HintPath>D:\Program Files (x86)\Electronic Arts\The Sims 3 Map Editor\SharedDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Sims3Metadata">
+      <HintPath>D:\Program Files (x86)\Electronic Arts\The Sims 3 Map Editor\Sims3Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="Sims3MetadataToolsOnly">
+      <HintPath>D:\Program Files (x86)\Electronic Arts\The Sims 3 Map Editor\Sims3MetadataToolsOnly.dll</HintPath>
+    </Reference>
+    <Reference Include="StringTableResources" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuildVersion.cs" />
+    <Compile Include="CameraController.cs" />
+    <Compile Include="CameraMouseDownEventArgs.cs" />
+    <Compile Include="CameraMouseDownHandler.cs" />
+    <Compile Include="CameraPanel.cs" />
+    <Compile Include="CASPartRefEditor.cs" />
+    <Compile Include="Database\PendingInstanceBrowser.cs" />
+    <Compile Include="DeckFoundationRefEditor.cs" />
+    <Compile Include="FenceRefEditor.cs" />
+    <Compile Include="FloorEdgePatternRefEditor.cs" />
+    <Compile Include="FloorPatternRefEditor.cs" />
+    <Compile Include="IStringTableWriter.cs" />
+    <Compile Include="LightCameraPanel.cs" />
+    <Compile Include="Lighting\LightRigType.cs" />
+    <Compile Include="Menu\IMainMenu.cs" />
+    <Compile Include="Menu\MenuItem.cs" />
+    <Compile Include="ModularRailingsRefEditor.cs" />
+    <Compile Include="ModularStairsRefEditor.cs" />
+    <Compile Include="OptionalCatalogObjectEditor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RevisionControl\ClientSpecForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RevisionControl\ClientSpecForm.Designer.cs">
+      <DependentUpon>ClientSpecForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RevisionControl\EditAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RevisionControl\EditAddForm.Designer.cs">
+      <DependentUpon>EditAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RevisionControl\ManualP4LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RevisionControl\ManualP4LoginForm.Designer.cs">
+      <DependentUpon>ManualP4LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RevisionControl\PendingFilesForm.cs" />
+    <Compile Include="RevisionControl\Resource.cs" />
+    <Compile Include="RevisionControl\RevisionControlObject.cs" />
+    <Compile Include="RevisionControl\RevObjOutofSyncHandler.cs" />
+    <Compile Include="RevisionControl\RevObjReloadedHandler.cs" />
+    <Compile Include="RevisionControl\RevObjStatusChangedHandler.cs" />
+    <Compile Include="RevisionControl\SubmitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RevisionControl\SubmitForm.Designer.cs">
+      <DependentUpon>SubmitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoofPatternRefEditor.cs" />
+    <Compile Include="SearchableItemRefUIEditor.cs" />
+    <Compile Include="SearchableTreeControl.cs" />
+    <Compile Include="SearchableTreeControlTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchableTreeControlTest.Designer.cs">
+      <DependentUpon>SearchableTreeControlTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchEventArgs.cs" />
+    <Compile Include="SearchEventHandler.cs" />
+    <Compile Include="Sims3\Automation\AutoTestAttribute.cs" />
+    <Compile Include="Sims3\Automation\AutoTestClearAttribute.cs" />
+    <Compile Include="Sims3\Automation\AutoTestFixtureAttribute.cs" />
+    <Compile Include="Sims3\Automation\AutoTestFixtureSetupAttribute.cs" />
+    <Compile Include="Sims3\Automation\AutoTestFixtureTearDownAttribute.cs" />
+    <Compile Include="Sims3\Automation\AutoTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sims3\Automation\AutoTestForm.Designer.cs">
+      <DependentUpon>AutoTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sims3\Automation\AutoTestInitAttribute.cs" />
+    <Compile Include="SimulationObjectRefEditor.cs" />
+    <Compile Include="StartupWaitForm.cs" />
+    <Compile Include="StringTableDatabase.cs" />
+    <Compile Include="StringTableExport.cs" />
+    <Compile Include="StringTableFile.cs" />
+    <Compile Include="StringTableLog.cs" />
+    <Compile Include="SubmitInstanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubmitInstanceForm.Designer.cs">
+      <DependentUpon>SubmitInstanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TreeSearchHelper.cs" />
+    <Compile Include="VisualizerModes.cs" />
+    <Compile Include="WaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForm.Designer.cs">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WallPatternRefEditor.cs" />
+    <Compile Include="WallRefEditor.cs" />
+    <Compile Include="WorldStringTableExport.cs" />
+    <Compile Include="XmlConfigFile.cs" />
+    <Compile Include="ZeroArgsDelegate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Database\PendingInstanceBrowser.resources" />
+    <EmbeddedResource Include="icons.bmp" />
+    <EmbeddedResource Include="RevisionControl\ClientSpecForm.resources" />
+    <EmbeddedResource Include="RevisionControl\DbInstancesIcons.bmp" />
+    <EmbeddedResource Include="RevisionControl\EditAddForm.resources" />
+    <EmbeddedResource Include="RevisionControl\ManualP4LoginForm.resources" />
+    <EmbeddedResource Include="RevisionControl\PendingFilesForm.resources" />
+    <EmbeddedResource Include="RevisionControl\Resource.resources" />
+    <EmbeddedResource Include="RevisionControl\SubmitForm.resources" />
+    <EmbeddedResource Include="SearchableTreeControl.resources" />
+    <EmbeddedResource Include="SearchableTreeControlTest.resources" />
+    <EmbeddedResource Include="Sims3\Automation\AutoTestForm.resources" />
+    <EmbeddedResource Include="SubmitInstanceForm.resources" />
+    <EmbeddedResource Include="WaitForm.resources" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
