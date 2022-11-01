@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{91CDC434-90A0-4C00-9D1B-9A19BA9156BE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Sims3.LDAL</RootNamespace>
+    <AssemblyName>LDAL</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfigProperty.cs" />
+    <Compile Include="DataSourceException.cs" />
+    <Compile Include="HALConfiguration.cs" />
+    <Compile Include="HALLayer.cs" />
+    <Compile Include="HALWebService\Authentication.cs" />
+    <Compile Include="HALWebService\BasicSearchCompletedEventArgs.cs" />
+    <Compile Include="HALWebService\BasicSearchCompletedEventHandler.cs" />
+    <Compile Include="HALWebService\BasicSearch_TextAndAudioCompletedEventArgs.cs" />
+    <Compile Include="HALWebService\BasicSearch_TextAndAudioCompletedEventHandler.cs" />
+    <Compile Include="HALWebService\CreateNewAudioScriptCompletedEventArgs.cs" />
+    <Compile Include="HALWebService\CreateNewAudioScriptCompletedEventHandler.cs" />
+    <Compile Include="HALWebService\CreateNewStringCompletedEventArgs.cs" />
+    <Compile Include="HALWebService\CreateNewStringCompletedEventHandler.cs" />
+    <Compile Include="HALWebService\DeleteStringCompletedEventArgs.cs" />
+    <Compile Include="HALWebService\DeleteStringCompletedEventHandler.cs" />
+    <Compile Include="HALWebService\ExactWordSearchCompletedEventArgs.cs" />
+    <Compile Include="HALWebService\ExactWordSearchCompletedEventHandler.cs" />
+    <Compile Include="HALWebService\GetAllAudioStrings_SpecifyReturnFieldsCompletedEventArgs.cs" />
+    <Compile Include="HALWebService\GetAllAudioStrings_SpecifyReturnFieldsCompletedEventHandler.cs" />
+    <Compile Include="HALWebService\GetAllAudioStrings_SpecifyReturnFields_IncludeProductionStat.2.cs" />
+    <Compile Include="HALWebService\GetAllAudioStrings_SpecifyReturnFields_IncludeProductionStat.cs" />
+    <Compile Include="HALWebService\GetAllProductsCompletedEventArgs.cs" />
+    <Compile Include="HALWebService\GetAllProductsCompletedEventHandler.cs" />
+    <Compile Include="HALWebService\GetAllStringsCompletedEventArgs.cs" />
+    <Compile Include="HALWebService\GetAllStringsCompletedEventHandler.cs" />
+    <Compile Include="HALWebService\GetAllStrings_SpecifyReturnFieldsCompletedEventArgs.cs" />
+    <Compile Include="HALWebService\GetAllStrings_SpecifyReturnFieldsCompletedEventHandler.cs" />
+    <Compile Include="HALWebService\GetAllStrings_WithProductionStatusAndDNT_SpecifyReturnFields.2.cs" />
+    <Compile Include="HALWebService\GetAllStrings_WithProductionStatusAndDNT_SpecifyReturnFields.cs" />
+    <Compile Include="HALWebService\GetAllStrings_WithProductionStatusesAndDNTCompletedEventArgs.cs" />
+    <Compile Include="HALWebService\GetAllStrings_WithProductionStatusesAndDNTCompletedEventHand.cs" />
+    <Compile Include="HALWebService\GetAllStrings_WithProductionStatuses_SIMS3CompletedEventArgs.cs" />
+    <Compile Include="HALWebService\GetAllStrings_WithProductionStatuses_SIMS3CompletedEventHand.cs" />
+    <Compile Include="HALWebService\GetAllStrings_WithVersionNumberCompletedEventArgs.cs" />
+    <Compile Include="HALWebService\GetAllStrings_WithVersionNumberCompletedEventHandler.cs" />
+    <Compile Include="HALWebService\GetAllStrings_WithVersionNumber_SIMS3CompletedEventArgs.cs" />
+    <Compile Include="HALWebService\GetAllStrings_WithVersionNumber_SIMS3CompletedEventHandler.cs" />
+    <Compile Include="HALWebService\GetAllStrings_WithVersionNumber_SpecifyReturnFieldsCompleted.2.cs" />
+    <Compile Include="HALWebService\GetAllStrings_WithVersionNumber_SpecifyReturnFieldsCompleted.cs" />
+    <Compile Include="HALWebService\GetCategoriesInProductCompletedEventArgs.cs" />
+    <Compile Include="HALWebService\GetCategoriesInProductCompletedEventHandler.cs" />
+    <Compile Include="HALWebService\GetLanguagesInProductCompletedEventArgs.cs" />
+    <Compile Include="HALWebService\GetLanguagesInProductCompletedEventHandler.cs" />
+    <Compile Include="HALWebService\GetPlatformsInProductCompletedEventArgs.cs" />
+    <Compile Include="HALWebService\GetPlatformsInProductCompletedEventHandler.cs" />
+    <Compile Include="HALWebService\GetServerTimeCompletedEventArgs.cs" />
+    <Compile Include="HALWebService\GetServerTimeCompletedEventHandler.cs" />
+    <Compile Include="HALWebService\GetStringsCompletedEventArgs.cs" />
+    <Compile Include="HALWebService\GetStringsCompletedEventHandler.cs" />
+    <Compile Include="HALWebService\HALLOKIWebService.cs" />
+    <Compile Include="HALWebService\MergeStringsCompletedEventArgs.cs" />
+    <Compile Include="HALWebService\MergeStringsCompletedEventHandler.cs" />
+    <Compile Include="HALWebService\RenameStringIdCompletedEventArgs.cs" />
+    <Compile Include="HALWebService\RenameStringIdCompletedEventHandler.cs" />
+    <Compile Include="HALWebService\SetStringsWithSplittingAndMergingCompletedEventArgs.cs" />
+    <Compile Include="HALWebService\SetStringsWithSplittingAndMergingCompletedEventHandler.cs" />
+    <Compile Include="HALWebService\SetStringsWithSplittingCompletedEventArgs.cs" />
+    <Compile Include="HALWebService\SetStringsWithSplittingCompletedEventHandler.cs" />
+    <Compile Include="HALWebService\UpdateAudioScriptCompletedEventArgs.cs" />
+    <Compile Include="HALWebService\UpdateAudioScriptCompletedEventHandler.cs" />
+    <Compile Include="HALWebService\UpdateAudioScript_IncludingDNTCompletedEventArgs.cs" />
+    <Compile Include="HALWebService\UpdateAudioScript_IncludingDNTCompletedEventHandler.cs" />
+    <Compile Include="HALWebService\UpdateSourceStringCompletedEventArgs.cs" />
+    <Compile Include="HALWebService\UpdateSourceStringCompletedEventHandler.cs" />
+    <Compile Include="HALWebService\UpdateSourceString_IncludingDNTCompletedEventArgs.cs" />
+    <Compile Include="HALWebService\UpdateSourceString_IncludingDNTCompletedEventHandler.cs" />
+    <Compile Include="ILDAL.cs" />
+    <Compile Include="Platform.cs" />
+    <Compile Include="ProductionStatus.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="QueryStringCompletedHandler.cs" />
+    <Compile Include="StringDataSource.cs" />
+    <Compile Include="StringDataSourceType.cs" />
+    <Compile Include="StringQueryResult.cs" />
+    <Compile Include="TableColHeader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
